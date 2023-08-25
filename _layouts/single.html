@@ -11,9 +11,12 @@ layout: table_wrappers
   <a class="skip-to-main" href="#main-content">Skip to main content</a>
   {% include icons/icons.html %}
   <!-- {% include components/sidebar-no-header.html %} -->
-  <div id="onpage-toc" class="onpage-toc">
-    <div id="js-toc" class="js-toc">
+  <div id="toc-container" class="toc-container">
+    <div id="onpage-toc" class="onpage-toc">
+      <div id="js-toc" class="js-toc">
+      </div>
     </div>
+  <button class="toc-dropup" onclick="showToc()">CLICK ME</button>
   </div>
   <div class="main" id="top">
     <!-- {% include components/header.html %} -->

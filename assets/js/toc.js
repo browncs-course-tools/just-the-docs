@@ -14,3 +14,21 @@ window.onload = function () {
 	hasInnerContainers: true,
     });
 }
+
+function showToc() {
+  document.getElementById("onpage-toc").classList.toggle("toc-show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.toc-dropup')) {
+    var dropdowns = document.getElementsByClassName("onpage-toc");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('toc-show')) {
+        openDropdown.classList.remove('toc-show');
+      }
+    }
+  }
+}
