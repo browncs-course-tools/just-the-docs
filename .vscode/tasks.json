@@ -32,5 +32,15 @@
       },
       "isBackground": true
     },
+    {
+      "label": "Clean",
+      "type": "shell",
+      "command": "bundle exec jekyll clean",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "isBackground": true
+    }
   ]
 }

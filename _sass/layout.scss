@@ -2,9 +2,11 @@
 
 .toc-dropup {
     position: fixed;
-    //z-index: 999;
+    z-index: 999;
     bottom: 20px;
     right: 20px;
+    height: 40px;
+    width: 40px;
     cursor: pointer;
 
     @include mq(lg) {
@@ -27,8 +29,8 @@
     position: fixed;
     display: none;
     height: 200px;
-    bottom: 30px;
-    right: 30px;
+    bottom: 60px;
+    right: 40px;
     overflow-y: scroll;
     width: $toc-width;
     background-color: $grey-lt-200;
