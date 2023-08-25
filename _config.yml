@@ -160,6 +160,8 @@ callouts:
     color: yellow
   danger:
     color: red
+  concept:
+    color: purple
 
 
 # Google Analytics Tracking (optional)
