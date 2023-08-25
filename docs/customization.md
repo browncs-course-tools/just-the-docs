@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: single
 title: Customization
 nav_order: 6
 ---
@@ -7,11 +7,11 @@ nav_order: 6
 # Customization
 {: .no_toc }
 
-## Table of contents
-{: .no_toc .text-delta }
+<!-- ## Table of contents -->
+<!-- {: .no_toc .text-delta } -->
 
-1. TOC
-{:toc}
+<!-- 1. TOC -->
+<!-- {:toc} -->
 
 ---
 

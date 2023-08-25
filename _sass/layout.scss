@@ -6,35 +6,93 @@
   flex-wrap: wrap;
   background-color: $sidebar-color;
 
-  @include mq(md) {
+  // @include mq(md) {
+  //   flex-flow: column nowrap;
+  //   position: fixed;
+  //   width: $nav-width-md;
+  //   height: 100%;
+  //   border-right: $border $border-color;
+  //   align-items: flex-end;
+  // }
+
+  @include mq(lg) {
+    width: calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$nav-width});
+    min-width: $nav-width;
     flex-flow: column nowrap;
     position: fixed;
-    width: $nav-width-md;
+    //width: $nav-width-md;
     height: 100%;
     border-right: $border $border-color;
     align-items: flex-end;
-  }
 
-  @include mq(lg) {
-    width: calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width});
-    min-width: $nav-width;
   }
+}
+
+.onpage-toc {
+    z-index: 0;
+    //display: flex;
+    //flex-wrap: wrap;
+    padding-top: $sp-8;
+    padding-bottom: $gutter-spacing-sm;
+    //overflow-y: auto;
+    flex: 1 1 auto;
+
+    @include mq(md) {
+
+	//flex-flow: column nowrap;
+	position: fixed;
+	width: $toc-width;
+	height: 100%;
+	//border-right: $border $border-color;
+	//align-items: flex-end;
+	margin-left: #{$content-width};
+    }
+
+    @include mq(lg) {
+	width: calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$toc-width});
+	min-width: $toc-width;
+
+	// stylelint-disable function-name-case
+	// disable for Max(), we want to use the CSS max() function
+	// margin-left: Max(
+	//   #{$nav-width},
+	//   calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
+	// );
+	margin-left: Max(
+	    #{$toc-width},
+	    calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$content-width + $toc-width})
+	);
+
+	// stylelint-enable function-name-case
+
+	//margin-left: #{$nav-width + $content-width};
+    }
+
+    .toc-list {
+	list-style: none;
+    }
 }
 
 .main {
   @include mq(md) {
     position: relative;
     max-width: $content-width;
-    margin-left: $nav-width-md;
+    //margin-left: $nav-width-md;
+    //margin-right: $toc-width;
   }
 
   @include mq(lg) {
     // stylelint-disable function-name-case
     // disable for Max(), we want to use the CSS max() function
+    // margin-left: Max(
+    //   #{$nav-width},
+    //   calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
+    // );
     margin-left: Max(
       #{$nav-width},
-      calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
+      calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$nav-width})
     );
+
     // stylelint-enable function-name-case
   }
 }
@@ -90,7 +148,7 @@
     display: block;
   }
 
-  @include mq(md) {
+  @include mq(lg) {
     display: block;
     padding-top: $sp-8;
     padding-bottom: $gutter-spacing-sm;
@@ -154,7 +212,7 @@
   appearance: none;
 }
 
-@include mq(md) {
+@include mq(lg) {
   .site-header .site-button {
     display: none;
   }

@@ -1,9 +1,17 @@
+*~
+\#*#
+.\#*
+
 *.gem
 .bundle
 .ruby-version
 .jekyll-cache
+.jekyll-metadata
 .sass-cache
 _site
 Gemfile.lock
 node_modules
+vendor/
+
 .DS_Store
+

@@ -95,8 +95,9 @@ $border-color: $grey-lt-100 !default;
 
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
-$nav-width: 264px !default;
-$nav-width-md: 248px !default;
+$nav-width: 220px !default;
+$nav-width-md: 220px !default;
+$toc-width: 240px !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
@@ -111,6 +112,6 @@ $media-queries: (
   xs: 320px,
   sm: 500px,
   md: $content-width,
-  lg: $content-width + $nav-width,
+  lg: $content-width + $nav-width + $toc-width,
   xl: 1400px,
 ) !default;
