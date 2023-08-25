@@ -9,7 +9,7 @@ window.onload = function () {
 	// linkClass: '.nav-list-link',
 	// Which headings to grab inside of the contentSelector element.
 	// activeListItemClass: 'active',
-	headingSelector: 'h2, h3, h4, h5, h6',
+	headingSelector: 'h1, h2, h3, h4, h5, h6',
 	// For headings inside relative or absolute positioned containers within content.
 	hasInnerContainers: true,
     });

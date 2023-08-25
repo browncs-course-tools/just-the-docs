@@ -34,25 +34,20 @@
     padding-bottom: $gutter-spacing-sm;
     flex: 1 1 auto;
 
-    @include mq(md) {
+    @include mq(lg) {
 	position: fixed;
 	width: $toc-width;
 	height: 100%;
-	margin-left: #{$content-width};
-    }
-
-    @include mq(lg) {
-	width: calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$toc-width});
-	min-width: $toc-width;
 
 	// stylelint-disable function-name-case
 	// disable for Max(), we want to use the CSS max() function
 	margin-left: Max(
 	    #{$toc-width},
-	    calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$content-width + $toc-width})
+	    calc((100% - #{$content-width}) / 2 + #{$content-width})
 	);
 	// stylelint-enable function-name-case
     }
+
 
     .js-toc {
 	.toc-link::before {

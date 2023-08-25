@@ -94,7 +94,7 @@ $border-radius: 4px !default;
 $border-color: $grey-lt-100 !default;
 
 // Grid system
-
+// 54bc4b
 $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
 $nav-width: 220px !default;
@@ -114,6 +114,6 @@ $media-queries: (
   xs: 320px,
   sm: 500px,
   md: $content-width,
-  lg: $content-width + $toc-width,
+  lg: $content-width + 2*$toc-width,
   xl: 1400px,
 ) !default;

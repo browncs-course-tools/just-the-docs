@@ -21,6 +21,16 @@
         "kind": "build",
         "isDefault": true
       }
-    }
+    },
+    {
+      "label": "Setup",
+      "type": "shell",
+      "command": "bundle install",
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "isBackground": true
+    },
   ]
 }
