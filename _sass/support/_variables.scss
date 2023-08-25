@@ -1,11 +1,13 @@
 // Typography
-
-$body-font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
-  roboto, "Helvetica Neue", arial, sans-serif !default;
-$mono-font-family: "SFMono-Regular", menlo, consolas, monospace !default;
+$body-font-family: -apple-system, BlinkMacSystemFont, "Segoe UI","Helvetica Neue",
+		   "Helvetica,Roboto",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol" !default;
+// $body-font-family: system-ui, -apple-system, blinkmacsystemfont, "Segoe UI",
+//   roboto, "Helvetica Neue", arial, sans-serif !default;
+//$mono-font-family: "SFMono-Regular", menlo, consolas, monospace !default;
+$mono-font-family: Menlo,Monaco,Consolas,"Courier New",monospace !default;
 $root-font-size: 16px !default; // Base font-size for rems
 $body-line-height: 1.4 !default;
-$content-line-height: 1.6 !default;
+$content-line-height: 1.5 !default;
 $body-heading-line-height: 1.25 !default;
 
 // Font size
@@ -97,7 +99,7 @@ $gutter-spacing: $sp-6 !default;
 $gutter-spacing-sm: $sp-4 !default;
 $nav-width: 220px !default;
 $nav-width-md: 220px !default;
-$toc-width: 240px !default;
+$toc-width: 200px !default;
 $nav-list-item-height: $sp-6 !default;
 $nav-list-item-height-sm: $sp-8 !default;
 $nav-list-expander-right: true;
@@ -112,6 +114,6 @@ $media-queries: (
   xs: 320px,
   sm: 500px,
   md: $content-width,
-  lg: $content-width + $nav-width + $toc-width,
+  lg: $content-width + $toc-width,
   xl: 1400px,
 ) !default;

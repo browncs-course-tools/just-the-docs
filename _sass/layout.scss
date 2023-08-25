@@ -30,21 +30,14 @@
 
 .onpage-toc {
     z-index: 0;
-    //display: flex;
-    //flex-wrap: wrap;
     padding-top: $sp-8;
     padding-bottom: $gutter-spacing-sm;
-    //overflow-y: auto;
     flex: 1 1 auto;
 
     @include mq(md) {
-
-	//flex-flow: column nowrap;
 	position: fixed;
 	width: $toc-width;
 	height: 100%;
-	//border-right: $border $border-color;
-	//align-items: flex-end;
 	margin-left: #{$content-width};
     }
 
@@ -54,22 +47,33 @@
 
 	// stylelint-disable function-name-case
 	// disable for Max(), we want to use the CSS max() function
-	// margin-left: Max(
-	//   #{$nav-width},
-	//   calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
-	// );
 	margin-left: Max(
 	    #{$toc-width},
 	    calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$content-width + $toc-width})
 	);
-
 	// stylelint-enable function-name-case
+    }
 
-	//margin-left: #{$nav-width + $content-width};
+    .js-toc {
+	.toc-link::before {
+	    background-color: $body-background-color;
+	}
+
+	.is-active-link::before {
+	    background-color: $link-color;
+	}
     }
 
     .toc-list {
 	list-style: none;
+	font-size: $font-size-3;
+	a {
+	    overflow: hidden;
+	    text-overflow: ellipsis;
+	    white-space: pre;
+	    display: block;
+	    width: 100%
+	}
     }
 }
 
@@ -84,13 +88,9 @@
   @include mq(lg) {
     // stylelint-disable function-name-case
     // disable for Max(), we want to use the CSS max() function
-    // margin-left: Max(
-    //   #{$nav-width},
-    //   calc((100% - #{$nav-width + $content-width}) / 2 + #{$nav-width})
-    // );
     margin-left: Max(
-      #{$nav-width},
-      calc((100% - #{$nav-width + $content-width + $toc-width}) / 2 + #{$nav-width})
+      #{$gutter-spacing},
+      calc((100% - #{$content-width}) / 2)
     );
 
     // stylelint-enable function-name-case

@@ -1,7 +1,7 @@
 window.onload = function () {
     tocbot.init({
 	// Where to render the table of contents.
-	tocSelector: '.onpage-toc',
+	tocSelector: '.js-toc',
 	// Where to grab the headings to build the table of contents.
 	contentSelector: '.main-content',
 	// listClass: '.nav-list',

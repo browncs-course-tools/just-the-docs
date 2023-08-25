@@ -15,6 +15,8 @@ nav_order: 6
 
 ---
 
+## Just the Docs supports two color schemes: light (default), and dark.
+
 ## Color schemes
 
 Just the Docs supports two color schemes: light (default), and dark.
