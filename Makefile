@@ -15,7 +15,7 @@ build:
 
 # Compile the site and start a webserver to preview it
 serve: build
-	bundle exec jekyll serve --incremental
+	bundle exec jekyll serve --livereload
 
 # Delete all generated files
 clean:
