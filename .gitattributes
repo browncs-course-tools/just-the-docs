@@ -1,2 +1,3 @@
 # Force unix newlines on all platforms
-* text eol=lf
+*.md text eol=lf
+*.html text eol=lf
