@@ -1,6 +1,6 @@
 ---
 layout: single
-title: Customization
+title: Example
 nav_order: 6
 ---
 

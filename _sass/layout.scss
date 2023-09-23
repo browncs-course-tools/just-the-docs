@@ -34,6 +34,7 @@
     overflow-y: scroll;
     width: $toc-width;
     background-color: $grey-lt-200;
+    overflow: hidden;
 
     @include mq(lg) {
 	padding-top: $sp-8;
@@ -56,6 +57,11 @@
 	// stylelint-enable function-name-case
     }
 
+    .onpage-toc-header {
+	font-size: $font-size-3;
+	font-weight: bold;
+	padding-left: 1em;
+    }
 
     .js-toc {
 	.toc-link::before {
@@ -244,7 +250,7 @@
   border: none;
   margin: 0;
   text-align: inherit;
-  font: inherit;
+  color: $link-color;
   border-radius: 0;
   appearance: none;
 }
